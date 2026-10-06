@@ -1,0 +1,18 @@
+[project]
+name = "whispper"
+version = "0.1.0"
+description = "Transcribe audio files to text with Whisper, locally (faster-whisper, GPU if available)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "faster-whisper>=1.2.1",
+    "tqdm>=4.66",
+    # av 19 removed open(metadata_errors=...), which faster-whisper 1.2.1 still passes.
+    "av<19",
+    # CUDA 12 runtime libraries for the GPU path (CPU fallback works without a GPU).
+    "nvidia-cublas-cu12>=12; sys_platform == 'win32' or sys_platform == 'linux'",
+    "nvidia-cudnn-cu12>=9,<10; sys_platform == 'win32' or sys_platform == 'linux'",
+]
+
+[tool.uv]
+package = false

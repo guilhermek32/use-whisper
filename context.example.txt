@@ -1,0 +1,2 @@
+hotwords: Acme, Kubernetes, OKR, roadmap
+prompt: Reunião semanal do time de produto. Falamos sobre o roadmap, os prazos e as prioridades.
