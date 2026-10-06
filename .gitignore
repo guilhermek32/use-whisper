@@ -1,0 +1,9 @@
+# Environment
+.venv/
+__pycache__/
+
+# Personal data: recordings, transcripts and per-meeting context
+audios/
+transcriptions/
+/*.txt
+!/context.example.txt
